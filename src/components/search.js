@@ -21,7 +21,7 @@ export default class Search extends Component {
         return (
             <>
                 <div className="search-head">
-                    <Link to="/">&lt;-</Link>
+                    <Link to="/react-probooks">&#8592;</Link>
                     <input type="text" placeholder="Search by title or author" onChange={this.onSearch} />
                 </div>
                 <h1>{this.props.books.filter((book) => {
