@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+header {
+  background: gray;
+  height: 10vh;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6vh;
+}
+
+.book-cont {
+  position: relative;
+  margin: 0 3vh;
+  height: 33vh;
+  word-wrap: break-word;
+  width: 8vw;
+  font-size: 0.8em;
+}
+
+.book-cont img {
+  height: 17vh;
+  width: 100%;
+  filter: drop-shadow(1px 1px 4px black);
+}
+
+.book-cont select {
+  position: absolute;
+  border-radius: 50%;
+  width: 3vw;
+  height: 6vh;
+  color: gray;
+  background: gray;
+  outline: none;
+  border: none;
+  top: 13vh;
+  left: 11vh;
+}
+
+.book-cont option {
+  color: gray;
+  background: black;
+}
+
+.book-cont .arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 9px solid rgb(255, 255, 255);
+  top: 15.9vh;
+  right: 1.7vh;
+  z-index: 1;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.book-cont .dis {
+  color: grey;
+  pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.bname {
+  font-size: 1.9vh;
+  font-weight: 700;
+}
+
+.bauthor {
+  color: grey;
+}
+
+:is(.read, .like, .dislike, .search-res) {
+  height: 100%;
+  min-height: 10vh;
+  display: grid;
+  grid-template-columns: repeat(9, auto);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  grid-gap: 6vh 0;
+}
+
+.search-btn {
+  height: 8vh;
+  width: 4vw;
+  background: gray;
+  position: fixed;
+  bottom: 3vh;
+  text-decoration: none;
   color: white;
+  font-size: 5vh;
+  border-radius: 50%;
+  right: 4vh;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.search-head {
+  height: 7vh;
+  box-shadow: 0 0 14px 2px #00000087;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-head a {
+  text-decoration: none;
+  color: #565656;
+  font-size: 4vh;
+}
+
+.search-head input[type=text] {
+  width: 93%;
+  outline: none;
+  border: none;
+  font-size: 2.5vh;
+}
+
+.load {
+  background: #fff;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
